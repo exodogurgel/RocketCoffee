@@ -1,0 +1,281 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --backgrond: #000;
+  --text-color: #FFF;
+  --button: #8257E5;
+  --border: #29292E;
+  --border-menu-mobile: #A8A8B3;
+  --text-color-menu-mobile: #E1E1E6;
+
+  font-size: 62.5%;
+  --ff: 'Manrope', sans-serif;
+  --fs-body: 1.6rem;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: var(--fs-body);
+  background: url(./assets/blur-mobile.png) no-repeat var(--backgrond) bottom ;
+  background-size: cover;
+}
+
+.page {
+  width: clamp(40rem, 20rem + 50vw, 91.8rem);
+  margin: 0 auto;
+  position: relative;
+}
+
+.page nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 3.7rem 2.6rem 0;
+}
+
+nav > img {
+  cursor: pointer;
+  padding: 5px;
+}
+
+#logo-desktop {
+  display: none;
+}
+
+ul {
+  display: none;
+}
+
+ul.on {
+  position: absolute;
+  background: var(--backgrond);
+  width: 100%;
+  height: 100%;
+  top: 7rem;
+  left: 0;
+
+  padding: 0 2.6rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.5rem;  
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--border-menu-mobile)
+}
+
+ul li a:hover {
+  font-weight: bold;
+  color: var(--text-color-menu-mobile)
+}
+
+#close {
+  display: none;
+}
+
+#close.on {
+  display: block;
+}
+
+#menu-toggle.on {
+  display: none
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section p {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 4rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  margin: 8.8rem 0;
+  width: 30.3rem;
+  color: var(--text-color);
+}
+
+#btn {
+  width: 17.3rem;
+  height: 3.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--button);
+
+  font-weight: 800;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02em;
+
+  color: var(--text-color);
+  background: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+}
+
+#btn span {
+  font-size: 1.5rem;
+}
+
+#btn:hover {
+  border: solid 2px var(--button)
+}
+
+section h1, section h2 {
+  font-size: clamp(5rem, 3rem + 4vw, 8rem);
+}
+
+section h1 {
+  margin: 8.8rem 0 0;
+  color: var(--text-color);
+
+  font-weight: 700;
+  line-height: 6.8rem;
+  letter-spacing: -0.03em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section h2 {
+  margin-top: -.8rem;
+  margin-bottom: .5rem;
+  font-weight: 700;
+  line-height: 6.8rem;
+  letter-spacing: -0.03em;
+
+  text-shadow: -.1rem -.1rem 0 var(--button), .1rem -.1rem 0 var(--button), -.1rem .1rem 0 var(--button), .1rem .1rem 0 var(--button);
+}
+
+.image img {
+  width: 100%;
+}
+
+@media(min-width: 800px) {
+
+  #logo-desktop {
+    display: block;
+  }
+
+  #logo-mobile {
+    display: none;
+  }
+
+  #menu-toggle {
+    padding-right: 13rem;
+    transform: scale(1.8);
+  }
+
+  #close {
+    padding-right: 13rem;
+    transform: scale(1.8);
+  }
+
+  body {
+    background: url(./assets/blur-1.png) no-repeat bottom left, url(./assets/blur-2.png) no-repeat top right var(--backgrond);
+  }
+
+  section p {
+    display: none;
+  }
+
+  section button {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+
+    display: block;
+  }
+
+  section h1 {
+    margin-bottom: 3rem;
+    animation: topDown 1200ms ease; 
+  }
+
+  h2, .image img {
+    animation: downTop 1200ms 500ms backwards;
+  }
+
+}
+
+@media(min-width: 1250px) {
+  
+   #menu-toggle {
+    display: none;
+  }
+
+  #options-nav {
+    display: flex;
+    gap: 3.5rem;
+    align-items: center;
+    list-style: none;
+
+    position: relative;
+    left: -22rem;
+  }
+
+  #options-nav li, #options li a {
+    transition: all 0.2s;
+  }
+
+  #options-nav li a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    letter-spacing: 0.02em;
+    opacity: .8;
+
+    color: var(--text-color);
+  }
+
+  #options-nav li a:hover {
+    opacity: 1;
+  }
+
+  #options-nav li:hover {
+    transform: scale(1.1);
+  }
+
+  ul li:first-child {
+    margin-top: 0;
+  }
+}
+
+@keyframes topDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downTop {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
