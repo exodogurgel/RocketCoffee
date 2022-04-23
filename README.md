@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./assets/BALANCE (1).png" width="200px">
+  Rocket Coffee
 </h1>
 
 <p align="center">
@@ -14,14 +14,10 @@
  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
 </p>
 
-
-
-
-
 <br>
 
 <div style="display: inline_block" align="center">
-  <img alt="Balance Sheet" src="./assets/gifBalanceSheet.gif" width="100%"> 
+  <img alt="Balance Sheet" src="./assets/gifRocketCoffee1.gif" width="100%"> 
 
 </div>
 
@@ -38,21 +34,10 @@ This project was developed with the following technologies:
 
 # 💻 Project
 
-The Balance Sheet was developed to store all your expenses and income. Doing all the calculations automatically so you know if you're positive or negative in the month.
-
-You can remove any transaction at any time.
-
-The application contains dark mode to suit your taste.
-
-The application is responsive, also working on mobile devices.
-
-
 
 # 🔖 Layout
 
-You can view the project layout through [this link](https://exodogurgel.github.io/BalanceSheet/).
-
-Layout mobile [click here](https://github.com/exodogurgel/BalanceSheet/blob/main/assets/image-responsive.png)
+You can view the project layout through [this link](https://exodogurgel.github.io/RocketCoffee/).
 
 
 # :memo: License
